@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Web Front end</title>
+</head>
+
+<body>
+    <center>
+        <h1>Trabalho da Professora Juliana</h1>
+        <div>
+            <button onclick="jogo1()">Joguinho 1 - Acerte o número</button>
+            <button onclick="jogo2()">Joguinho 2 - Cálculo de média</button>
+            <button onclick="jogo3()">Joguinho 3 - Soma de números</button>
+        </div>
+    </center>
+
+    <script>
+
+        function jogo1() {
+            const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+            const palpite = prompt("Chute o número secreto (1 a 10):");
+            if (parseInt(palpite) === numeroSecreto) {
+                alert("Parabéns! Você é mt bom!");
+            } else {
+                alert(`Errado! O número era ${numeroSecreto}.`);
+            }
+        }
+
+        function jogo2() {
+            let qtdNotas = parseInt(prompt("De quantos números quer fazer a média?"));
+            let soma = 0;
+
+            for (let i = 1; i <= qtdNotas; i++) {
+                let nota = parseFloat(prompt("Digite a nota " + i + ":"));
+                soma += nota;
+            }
+
+            let media = soma / qtdNotas;
+            alert("A média das " + qtdNotas + " notas é " + media);
+        }
+
+        function jogo3() {
+            let soma = 0;
+            let numero = parseFloat(prompt("Digite um número para somar (0 para parar):"));
+
+            while (numero !== 0) {
+                soma += numero;
+                numero = parseFloat(prompt("Digite outro número para somar (0 para parar):"));
+            }
+
+            alert("A soma total dos números é: " + soma);
+        }
+    </script>
+</body>
+
+</html>
