@@ -42,17 +42,13 @@
             alert("A média das " + qtdNotas + " notas é " + media);
         }
 
-        function jogo3() {
-            let soma = 0;
-            let numero = parseFloat(prompt("Digite um número para somar (0 para parar):"));
+		function jogo3() {
+			let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+			let numero2 = parseFloat(prompt("Digite o segundo número:"));
+			let soma = numero1 + numero2;
+			alert("A soma dos dois números é: " + soma);
+		}
 
-            while (numero !== 0) {
-                soma += numero;
-                numero = parseFloat(prompt("Digite outro número para somar (0 para parar):"));
-            }
-
-            alert("A soma total dos números é: " + soma);
-        }
     </script>
 </body>
 
